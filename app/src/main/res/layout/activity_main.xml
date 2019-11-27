@@ -7,10 +7,12 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:orientation="vertical"
+        android:translationX="0dp"
+        android:id="@+id/mainmenu"
         android:layout_width="280dp"
+        android:layout_height="match_parent"
         android:background="#000"
-        android:layout_height="match_parent">
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/avatar"
@@ -22,81 +24,130 @@
 
         <TextView
             android:id="@+id/nomeUser"
-            android:text="André 157"
-            android:textColor="#757575"
-            android:textSize="25dp"
-            android:textStyle="normal"
-            android:gravity="center"
-            android:layout_marginTop="14dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="User Name"
+            android:textColor="#757575"
+            android:textSize="25dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="emailteste@outlook.com"
+            android:textColor="#FFF"
+            android:textSize="16sp"
+            android:textStyle="normal" />
 
         <Button
             android:id="@+id/btEdit"
-            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:layout_marginTop="60dp"
             android:background="#000"
-            android:textColor="#757575"
-            android:textSize="20dp"
-            android:textAllCaps="false"
+            android:gravity="left"
+
             android:text="Editar Perfil"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:textAllCaps="false"
+            android:textColor="#757575"
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/btFavoritos"
-            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:layout_marginTop="5dp"
             android:background="#000"
-            android:textColor="#757575"
-            android:textSize="20dp"
-            android:textAllCaps="false"
+            android:gravity="left"
             android:text="Favoritos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:textAllCaps="false"
+            android:textColor="#757575"
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/btConfig"
-            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:layout_marginTop="5dp"
             android:background="#000"
-            android:textColor="#757575"
-            android:textSize="20dp"
-            android:textAllCaps="false"
+            android:drawableLeft="@android:drawable/ic_menu_preferences"
+            android:drawablePadding="10dp"
+            android:gravity="left|center_vertical"
             android:text="Configurações"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:textAllCaps="false"
+            android:textColor="#757575"
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/btSobre"
-            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:layout_marginTop="5dp"
             android:background="#000"
-            android:textColor="#757575"
-            android:textSize="20dp"
-            android:textAllCaps="false"
+            android:gravity="left"
             android:text="Sobre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:textAllCaps="false"
+            android:textColor="#757575"
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/btSair"
-            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:layout_marginTop="60dp"
             android:background="#000"
-            android:textColor="#757575"
-            android:textSize="20dp"
-            android:textAllCaps="false"
+            android:gravity="left"
             android:text="Sair"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:textAllCaps="false"
+            android:textColor="#757575"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tituloSobre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="HB GAMES WIKI. 2019 ©"
+            android:textColor="#757575"
+            android:textSize="16dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="version 0.0.0.1"
+            android:textColor="#757575"
+            android:textSize="14dp"
+            android:textStyle="normal" />
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/maincontent"
+        android:layout_width="416dp"
+        android:layout_height="match_parent"
+        android:translationX="-280dp">
+
+        <Button
+            android:id="@+id/btnmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#000" />
+
+    </RelativeLayout>
 
 </LinearLayout>
