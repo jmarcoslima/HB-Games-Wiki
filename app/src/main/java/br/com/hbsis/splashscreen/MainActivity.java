@@ -10,29 +10,34 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    RelativeLayout maincontent,embacar;
+    RelativeLayout maincontent, embacar;
     LinearLayout mainmenu;
     Button btnMenu;
     Animation fromtop, frombottom;
     ImageView avatar;
     TextView nomeUser, email, tituloSobre, version;
     Button btEdit, btFavoritos, btConfig, btSobre, btSair;
-   // TransitionDrawable transition = (TransitionDrawable) embacar.getBackground();
-
+    Toolbar toolbar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar myToolbar = findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
+
         instanciarViews();
         chamarBarra();
         swipeMenu();
@@ -76,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 abrirMenu();
-                //transition.startTransition(500);
             }
         });
 
@@ -85,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         maincontent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fecharMenu();
+
             }
         });
 
@@ -153,7 +157,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 
 }
 
